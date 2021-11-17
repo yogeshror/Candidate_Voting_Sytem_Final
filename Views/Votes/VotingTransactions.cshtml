@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Candidate_Voting_Sytem_Final.Models.Vote>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using Microsoft.AspNetCore.Identity;
+
+@inject SignInManager<IdentityUser> SignInManager
+
+<h1>Voting List</h1>
+
+
+<p>
+ 
+</p>
+
+@if (User.IsInRole("admin"))
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Candidate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voter)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Candidate.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Voter.Email)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
