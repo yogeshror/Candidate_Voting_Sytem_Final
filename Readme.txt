@@ -1,3 +1,4 @@
+Randeep Kaur
 1. Open the Solution in Visual Studio
 2. Build the project 
 3. Navigate to tools ans select Nuget Package manager -> Package Manager Console (PMC)
@@ -15,7 +16,7 @@ Update-Database -Context Candidate_Voting_IdentityContext
 
 7 if you login as admin  from the following credentials will be able to see the Votes,  Voters 
 Candidates and voting transactions  
-User : admin@votes.com
+User : admin@vote.com
 Password: 1qaz2wsX@
 
 
